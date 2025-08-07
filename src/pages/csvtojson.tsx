@@ -9,6 +9,7 @@ export function CSVtoJSON(){
     const [copy, setCopy] = useState(false)
 
     const handleCopy = async ()=>{
+        console.log(copy);
         await navigator.clipboard.writeText(output);
         setCopy(true);
         setTimeout(() => setCopy(false), 1500);
